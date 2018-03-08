@@ -1,0 +1,75 @@
+#pragma once
+class soperaciones
+{
+private:
+	int a;
+	int b;
+	int suma;
+	int resta;
+	int mult;
+	int div;
+
+public:
+	soperaciones(void);
+	~soperaciones(void);
+	int calcular_operaciones1(int a, int b);
+	int calcular_operaciones2(int a, int b);
+	int calcular_operaciones3(int a, int b);
+	int calcular_operaciones4(int a, int b);
+};
+
+
+
+soperaciones.cpp
+#include "StdAfx.h"
+#include "soperaciones.h"
+
+
+soperaciones::soperaciones(void)
+{
+}
+
+
+soperaciones::~soperaciones(void)
+{
+}
+
+int soperaciones::calcular_operaciones1(int a, int b)
+{   div=a/b;
+	return div;
+}
+int soperaciones::calcular_operaciones2(int a, int b)
+{   mult=a*b;
+    return mult;
+}
+int soperaciones::calcular_operaciones3(int a, int b)
+{   suma=a+b;
+    return suma;
+}
+int soperaciones::calcular_operaciones4(int a, int b)
+{   resta=a-b;
+    return resta;
+}
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "soperaciones.h"
+using namespace std;
+
+void main()
+{
+	soperaciones soperaciones1, soperacione2; 
+	int x,y;
+	cout<<"ingrese primer numero: ";
+	cin>>x;
+	cout<<"ingrese segundo numero: ";
+	cin>>y;
+	cout<< "La division es: "<<soperaciones1.calcular_operaciones1(x,y)<<endl;
+	cout<< "La multiplicacion es: "<<soperaciones1.calcular_operaciones2(x,y)<<endl;
+	cout<< "La suma es: "<<soperaciones1.calcular_operaciones3(x,y)<<endl;
+	cout<< "La resta es: "<<soperaciones1.calcular_operaciones4(x,y)<<endl;
+	getch();
+
+}
